@@ -1,0 +1,20 @@
+<h3>Cadastro de Usuário</h3>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" formControlName="name" />
+  </div>
+
+  <div>
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" formControlName="email" />
+  </div>
+
+  <div>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" formControlName="password" />
+  </div>
+
+  <br><button class="button" type="submit">Cadastrar</button>
+  <button routerLink="/home">Página inicial</button>
+</form>

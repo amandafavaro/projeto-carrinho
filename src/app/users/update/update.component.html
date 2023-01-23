@@ -1,0 +1,19 @@
+<h3>Atualização Cadastral</h3>
+<form [formGroup]="updateUserForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" formControlName="name" />
+  </div>
+
+  <div>
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" formControlName="email" />
+  </div>
+
+  <mat-radio-group formControlName="role">
+    <mat-radio-button value="seller" color="primary">Vendedor</mat-radio-button>
+    <mat-radio-button value="client" color="warn">Cliente</mat-radio-button>
+  </mat-radio-group>
+
+  <br><button class="button" type="submit">Atualizar usuário</button>
+</form>

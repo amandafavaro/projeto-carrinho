@@ -1,0 +1,14 @@
+<h3>Lista de Produtos</h3>
+<div>
+  <input type="search" placeholder="Busca por nome" [formControl]="searchProductField"/>
+    <li *ngFor="let product of products">
+      Nome: {{ product.name }}<br>
+      Preço: R$ {{ product.price }}<br>
+      <button *ngIf="isSeller()" [routerLink]="[product._id]">Editar</button>
+      <button *ngIf="isSeller()" (click)="remover(product._id)">Remover</button>
+      <button (click)="addProductCart(product)">Comprar</button>
+    </li>
+    <br>Total: R$ {{ totalPrice }}<br>
+    Itens no carrinho: {{ quantity }}<br>
+    <br><button *ngIf="isSeller()" routerLink="add">Cadastrar produto</button>
+  </div>

@@ -1,0 +1,11 @@
+<h3>Lista de Usuários</h3>
+<div>
+  <input type="search" placeholder="Busca por nome" [formControl]="searchUserField"/>
+    <li *ngFor="let user of users">
+      Nome: {{ user.name }}<br>
+      E-mail: {{ user.email }}<br>
+      Cargo: {{ user.role }}<br>
+      <button [routerLink]="[user._id]">Editar</button>
+      <button (click)="remover(user._id)">Remover</button>
+    </li>
+  </div>

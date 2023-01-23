@@ -1,0 +1,14 @@
+<h3>Atualização de Produto</h3>
+<form [formGroup]="updateProductForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" formControlName="name" />
+  </div>
+
+  <div>
+    <label for="price">Price:</label>
+    <input type="text" id="price" formControlName="price" />
+  </div>
+
+  <br><button class="button" type="submit">Atualizar produto</button>
+</form>

@@ -1,0 +1,11 @@
+<h3>Carrinho</h3>
+<div>
+    <li *ngFor="let product of cart">
+        Nome: {{ product.name }}<br>
+        Preço: R$ {{ product.price }}<br>
+    </li>
+    <br>Total: R$ {{ totalPrice }}<br>
+    Itens no carrinho: {{ quantity }}<br>
+</div>
+<br><button (click)="cleanCart()">Limpar carrinho</button>
+<button (click)="checkout()">Finalizar compra</button>

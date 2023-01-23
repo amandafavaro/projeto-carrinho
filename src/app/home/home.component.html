@@ -1,0 +1,7 @@
+<h1>Projeto Carrinho</h1>
+<button routerLink="/home">Página Inicial</button>
+<button routerLink="/home/products">Produtos</button>
+<button routerLink="/home/cart">Carrinho</button>
+<button *ngIf="isSeller()" routerLink="/home/users">Usuários</button>
+<button (click)="logout()">Sair</button>
+<router-outlet></router-outlet>
